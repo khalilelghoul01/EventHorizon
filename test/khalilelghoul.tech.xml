@@ -1,0 +1,36 @@
+<scenario name="second scenario">
+    <config>
+        <path name="scenario" link="ideation/partage.conf" />
+        <path name="global" link="global.conf" />
+
+    </config>
+    <import>
+        <path name="login" snippet="components/login.xml" />
+    </import>
+    <!-- <step key="snippet:login" username="test" password="code1234" /> -->
+    <step key="clear-cookie" />
+    <!-- <step key="snippet:login" username="test2" password="code1234" /> -->
+    <step key="open" url="https://jkorpela.fi/forms/testing.html" />
+    <step key="screenshot" path="./khalil.png" />
+    <step key="type" selector='/html/body/form[1]/p[1]/textarea' text="hi bro" />
+    <step key="wait" time="2" />
+    <!-- <step key="click" selector='/html/body/form[1]/p[3]/input[2]' /> -->
+    <step key="wait" time="1" />
+    <step key="select" selector="/html/body/form[1]/p[1]/textarea" var="textarea" />
+    <!-- <step key="clear" selector="[textarea]" element="[textarea]" /> -->
+    <step key="js">
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+        console.log("hi");
+    </step>
+    <step key="wait" time="10" />
+    <step key="wait" time="15" />
+    <step key="screenshot" path="./khalil1.png" />
+</scenario>

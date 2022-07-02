@@ -1,0 +1,94 @@
+{
+    "scenario": {
+        "name": "second scenario",
+        "[text]": "\n    ",
+        "config": [
+            {
+                "[text]": "\n        ",
+                "path": [
+                    {
+                        "name": "scenario",
+                        "link": "ideation/partage.conf"
+                    },
+                    {
+                        "name": "global",
+                        "link": "global.conf"
+                    }
+                ],
+                "import": [
+                    {
+                        "[text]": "\n            ",
+                        "path": [
+                            {
+                                "name": "login",
+                                "snippet": "../components/login.xml"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "step": [
+            {
+                "key": "snippet:login",
+                "username": "test",
+                "password": "code1234"
+            },
+            {
+                "key": "clear-cookie"
+            },
+            {
+                "key": "snippet:login",
+                "username": "test2",
+                "password": "code1234"
+            },
+            {
+                "key": "open",
+                "url": "https://jkorpela.fi/forms/testing.html"
+            },
+            {
+                "key": "screenshot",
+                "path": "./khalil.png"
+            },
+            {
+                "key": "type",
+                "selector": "/html/body/form[1]/p[1]/textarea",
+                "text": "hi bro"
+            },
+            {
+                "key": "wait",
+                "time": "2"
+            },
+            {
+                "key": "wait",
+                "time": "1"
+            },
+            {
+                "key": "select",
+                "selector": "/html/body/form[1]/p[1]/textarea",
+                "var": "textarea"
+            },
+            {
+                "key": "clear",
+                "selector": "[textarea]",
+                "element": "[textarea]"
+            },
+            {
+                "key": "js",
+                "[text]": "\n        document.cookie = \"username1=John Doe\";\n        document.cookie = \"username2=John Doe\";\n        document.cookie = \"username3=John Doe\";\n        document.cookie = \"username4=John Doe\";\n    "
+            },
+            {
+                "key": "wait",
+                "time": "10"
+            },
+            {
+                "key": "wait",
+                "time": "15"
+            },
+            {
+                "key": "screenshot",
+                "path": "./khalil1.png"
+            }
+        ]
+    }
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "open": {
+      "paramaters": ["url"],
+      "description": "Open a url in the browser",
+      "file": "open"
+    },
+    "close": {
+      "paramaters": [],
+      "description": "Close the browser",
+      "file": "close"
+    },
+    "wait": {
+      "paramaters": ["time"],
+      "description": "Wait for a specific time",
+      "file": "wait"
+    },
+    "click": {
+      "paramaters": ["selector"],
+      "description": "Click on an element",
+      "file": "click"
+    },
+    "type": {
+      "paramaters": ["selector", "text"],
+      "description": "Type in an element",
+      "file": "type"
+    },
+    "assert-element": {
+      "paramaters": ["selector"],
+      "description": "Assert that an element exists",
+      "file": "assert-element"
+    },
+    "assert-text": {
+      "paramaters": ["selector", "text"],
+      "description": "Assert that an element has a specific text",
+      "file": "assert-text"
+    },
+    "hover-click": {
+      "paramaters": ["selector", "hoverSelector"],
+      "description": "Hover over an element and click on it",
+      "file": "hover-click"
+    },
+    "var": {
+      "paramaters": ["name", "value"],
+      "description": "description",
+      "file": "var"
+    },
+    "log": {
+      "paramaters": ["msg"],
+      "description": "description",
+      "file": "log"
+    },
+    "refersh": {
+      "paramaters": [],
+      "description": "description",
+      "file": "refersh"
+    },
+    "clear": {
+      "paramaters": ["selector"],
+      "description": "description",
+      "file": "clear"
+    },
+    "switch-window": {
+      "paramaters": ["name"],
+      "description": "description",
+      "file": "switch-window"
+    },
+    "switch-iframe": {
+      "paramaters": ["name"],
+      "description": "description",
+      "file": "switch-iframe"
+    },
+    "switch-default": {
+      "paramaters": [],
+      "description": "description",
+      "file": "switch-default"
+    },
+    "source": {
+      "paramaters": ["var"],
+      "description": "description",
+      "file": "source"
+    },
+    "forward": {
+      "paramaters": [],
+      "description": "description",
+      "file": "forward"
+    },
+    "backward": {
+      "paramaters": [],
+      "description": "description",
+      "file": "backward"
+    },
+    "clear-cookie": {
+      "paramaters": [],
+      "description": "description",
+      "file": "clear-cookie"
+    },
+    "size": {
+      "paramaters": ["width", "height"],
+      "description": "description",
+      "file": "size"
+    },
+    "wait-until": {
+      "paramaters": ["time", "selector"],
+      "description": "description",
+      "file": "wait-until"
+    },
+    "screenshot": {
+      "paramaters": ["path"],
+      "description": "description",
+      "file": "screenshot"
+    },
+    "for": {
+      "paramaters": ["times"],
+      "description": "description",
+      "file": "for"
+    },
+    "cmd": {
+      "paramaters": ["command"],
+      "description": "description",
+      "file": "cmd"
+    },
+    "js": {
+      "paramaters": [],
+      "description": "description",
+      "file": "js"
+    },
+    "select": {
+      "paramaters": ["selector", "var"],
+      "description": "description",
+      "file": "select"
+    },
+    "file": {
+      "paramaters": ["path", "selector"],
+      "description": "description",
+      "file": "file"
+    },
+    "snippet:login": {
+      "paramaters": [],
+      "description": "description",
+      "file": "file"
+    }
+  }
+]

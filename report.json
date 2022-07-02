@@ -1,0 +1,144 @@
+[
+    {
+        "keyword": "Feature",
+        "uri": "ideation partage",
+        "name": "ideation partage",
+        "id": "ideation partage",
+        "line": 2,
+        "description": "",
+        "tags": [],
+        "elements": [
+            {
+                "keyword": "Scenario",
+                "id": "ideation partage",
+                "name": "ideation partage",
+                "line": 4,
+                "description": "",
+                "tags": [],
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Step",
+                        "name": "Wait for a specific time",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 2011598848.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Open a url in the browser",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 4615699712.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Wait for a specific time",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 2004918528.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Type in an element",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 102555904.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Type in an element",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 74689536.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Click on an element",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 72999424.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Wait for a specific time",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 2002649344.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "description",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 13606333184.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Click on an element",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 453998592.0
+                        }
+                    },
+                    {
+                        "keyword": "Step",
+                        "name": "Wait for a specific time",
+                        "line": 25,
+                        "match": {
+                            "location": ""
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 10003777536.0
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

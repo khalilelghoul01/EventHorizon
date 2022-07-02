@@ -1,0 +1,37 @@
+<scenario name="ideation partage">
+    <config>
+        <path name="scenario" link="ideation/partage.conf" />
+        <path name="global" link="global.conf" />
+    </config>
+    <!-- Login -->
+    <step key="wait" time="2" />
+    <step key="Open" url="[global>WEBAPP>application_url]" var="url" />
+    <step key="wait" time="2" />
+    <step key="type" text="[global>USER>login]" selector="#username" />
+    <step key="type" text="[global>USER>password]" selector="#password" />
+    <step key="click" selector='//button[normalize-space()="Soumettre"]' />
+    <!-- Partage D'idee -->
+    <step key="wait" time="2" />
+    <step key="wait-until" selector="[scenario>ELEMENTS>btn_onglet_ideation]" time="25" />
+    <step key="click" selector="[scenario>ELEMENTS>btn_onglet_ideation]" />
+    <step key="wait" time="10" />
+    <!--
+    And Wait for [scenario>ELEMENTS>btn_proposer_idee] for 25
+    And Click [scenario>ELEMENTS>btn_proposer_idee]
+    And Assert element [scenario>ELEMENTS>form_proposer_idee]
+    And Click [scenario>ELEMENTS>select_categorie]
+    And Click [scenario>ELEMENTS>select_categorie_option]
+    And Set var value = Get text [scenario>ELEMENTS>select_categorie]
+    And Click [scenario>ELEMENTS>input_libelle]
+    And Type [scenario>ELEMENTS>input_libelle_value] in [scenario>ELEMENTS>input_libelle]
+    And Click [scenario>ELEMENTS>select_timeline]
+    And Click [scenario>ELEMENTS>select_timeline_option]
+    And Set var value = Get text [scenario>ELEMENTS>select_timeline]
+    And Click [scenario>ELEMENTS>input_description]
+    And Type [scenario>ELEMENTS>input_description_value] in [scenario>ELEMENTS>input_description]
+    And File [scenario>ELEMENTS>input_image_value] in [scenario>ELEMENTS>input_image]
+    And Click [scenario>ELEMENTS>btn_upload]
+    And Click [scenario>ELEMENTS>btn_validation]
+    And Wait 1
+    And Assert element [scenario>ELEMENTS>notification] -->
+</scenario>
