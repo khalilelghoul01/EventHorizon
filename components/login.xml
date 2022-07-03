@@ -1,7 +1,6 @@
 <snippet description="login to accrecio" name="login">
-    <step key="Open" url="[global>WEBAPP>application_url]" var="url" />
     <step key="wait" time="2" />
     <step key="type" text="%%username%%" selector="#username" />
-    <step key="type" text="[global>USER>password]" selector="#password" />
+    <step key="type" text="%%password%%" selector="#password" />
     <step key="click" selector='//button[normalize-space()="Soumettre"]' />
 </snippet>

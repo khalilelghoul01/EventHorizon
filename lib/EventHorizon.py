@@ -304,6 +304,60 @@ class EventHorizon:
         for step in steps:
             self.currentStep = self.loadStep(step)
             if(not self.failed):
+                if(self.currentStep["key"].lower().strip().startswith("snippet:")):
+                    snippet = self.loadSnippet(
+                        self.memory["[snippets]"][self.currentStep["key"].replace("snippet:", "").strip()])
+                    self.runSnippet(
+                        snippet
+                    )
+                format, error = self.checkStep()
+                if(not format):
+                    self.logError(error)
+                timerStep = Timer()
+                timerStep.start()
+                try:
+                    self.runStep()
+                except Exception as e:
+                    self.failed = True
+                    timerStep.stop()
+                    self.currentStepTime = timerStep.getTime()
+                    self.addStepToReport("failed", str(e))
+                    continue
+                timerStep.stop()
+                self.currentStepTime = timerStep.getTime()
+            else:
+                self.currentStepTime = 0
+                self.addStepToReport("failed")
+                continue
+            self.addStepToReport()
+        self.failed = False
+
+    def loadSnippet(self, snippet):
+        """
+        Load the snippet.
+        syntax:
+            LoadSnippet(snippet)
+        """
+        currentStep = self.currentStep
+        for step in snippet["step"]:
+            for key in step:
+                if(key == "step"):
+                    continue
+                for key2 in currentStep:
+                    if(f"%%{key2}%%" in step[key]):
+                        step[key] = currentStep[key2]
+        return snippet
+
+    def runSnippet(self, steps):
+        """
+        Run the scenario.
+        syntax:
+            RunScenario()
+        """
+
+        for step in steps["step"]:
+            self.currentStep = self.loadStep(step)
+            if(not self.failed):
                 format, error = self.checkStep()
                 if(not format):
                     self.logError(error)
@@ -376,8 +430,7 @@ class EventHorizon:
 
     def addStepToReport(self, status="passed", error=None):
         if(error is not None):
-            print(error)
-            raise Exception(error)
+            self.logError(error)
         if self.failed:
             status = "failed"
         step = self.currentStep
