@@ -25,5 +25,5 @@
     <step key="click" selector="[scenario>ELEMENTS>select_timeline_option]" />
     <step key="click" selector="[scenario>ELEMENTS>input_description]" />
     <step key="type" selector="[scenario>ELEMENTS>input_description]" text="[scenario>ELEMENTS>input_description_value]" />
-    <step key="click" selector="[scenario>ELEMENTS>btn_validation]" />
+    <!-- <step key="click" selector="[scenario>ELEMENTS>btn_validation]" /> -->
 </scenario>
