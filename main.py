@@ -21,6 +21,7 @@ try:
         "./scenario").loadStepMap().loadSnippets().loadDriver().run().closeDriver().saveReport()
 except Exception as e:
     launcher.closeDriver().saveReport()
+
     print(e)
     exit(1)
 
