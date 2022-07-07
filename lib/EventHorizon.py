@@ -279,6 +279,7 @@ class EventHorizon:
        """
         scenarios = self.memory["[scenarios]"]
         for index, scenario in enumerate(scenarios):
+            self.memory["[snippets]"] = []
             self.currentScenario = scenario
             format, error = self.checkScenario()
             if (not format):
