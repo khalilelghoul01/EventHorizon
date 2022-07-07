@@ -1,0 +1,3 @@
+<scenario name="ideation partage">
+    <step key="wait" time="3" />
+</scenario>

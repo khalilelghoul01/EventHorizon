@@ -1,0 +1,1 @@
+python C:\Users\Khalil\Documents\Projet\autoXML\main.py C:\Users\Khalil\Documents\Projet\autoXML\test --browser=chrome --remote=127.0.0.1:4444 --report=C:\ProgramData\Jenkins\.jenkins\workspace\%JOB_NAME%\report.json

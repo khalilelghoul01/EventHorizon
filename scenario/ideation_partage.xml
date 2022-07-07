@@ -15,7 +15,7 @@
     <step key="click" selector="[scenario>ELEMENTS>btn_onglet_ideation]" />
     <step key="wait" time="10" />
     <step key="wait-until" selector="[scenario>ELEMENTS>btn_proposer_idee]" time="25" />
-    <step key="click" selector="[scenario>ELEMENTS>btn_proposer_idee]" />
+    <step key="click" selector="hello" />
     <step key="wait" time="10" />
     <step key="click" selector="[scenario>ELEMENTS>select_categorie]" />
     <step key="click" selector="[scenario>ELEMENTS>select_categorie_option]" />

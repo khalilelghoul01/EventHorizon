@@ -460,7 +460,7 @@ class EventHorizon:
     def logError(self, error):
         if(not self.failed):
             self.failed = True
-            print(f'Error: {error}')
+        print(f'Error: {error}')
         self.saveReport()
         return
 
