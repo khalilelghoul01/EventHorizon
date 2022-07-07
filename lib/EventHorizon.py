@@ -81,6 +81,7 @@ class EventHorizon:
         self.memory["[options]"]["remote"] = args["remote"] if args["remote"] else self.memory["[options]"]["remote"]
         self.memory["[options]"]["maximize"] = args["maximize"] if args["maximize"] else self.memory["[options]"]["maximize"]
         self.memory["[options]"]["headless"] = args["headless"] if args["headless"] else self.memory["[options]"]["headless"]
+        return self
 
     def loadConfig(self, file=None):
         """
@@ -105,6 +106,7 @@ class EventHorizon:
             with open("./config/steps.json", 'r') as f:
                 config = json.load(f)
                 self.memory["[steps]"] = config[0]
+        return self
 
     def loadScenarios(self, folder=None):
         """
@@ -138,6 +140,7 @@ class EventHorizon:
                 self.logError("The scenario file is not valid.")
             scenario['body'] = xmlLoad['scenario']
             self.memory["[scenarios]"].append(scenario)
+        return self
 
     def loadStepMap(self, scenarios=None):
         """
@@ -158,6 +161,7 @@ class EventHorizon:
                     "message": self.getDescription(step)
                 })
             self.memory["[report]"]["map"].append(stepsToMap)
+        return self
 
     def getDescription(self, step):
         """
@@ -192,6 +196,7 @@ class EventHorizon:
                     if(not paramater in step):
                         self.logError(
                             "The step '" + key + "' does not have the paramater '" + paramater + "'.")
+        return self
 
     def loadConfigScenario(self):
         scenario = self.currentScenario
@@ -210,6 +215,7 @@ class EventHorizon:
                     config = configparser.ConfigParser()
                     config.read(f"scenario_config/{path['link']}")
                     self.memory["[configs]"][path['name']] = config
+        return self
 
     def loadSnippets(self):
         """
@@ -234,6 +240,7 @@ class EventHorizon:
                 snippet = snippet["snippet"]
                 snippets[path["name"]] = snippet
         self.memory["[snippets]"] = snippets
+        return self
 
     def loadDriver(self):
         """
@@ -270,6 +277,7 @@ class EventHorizon:
                 self.memory["[driver]"] = webdriver.Remote(
                     command_executor=self.memory["[options]"]["remote"],
                     desired_capabilities=webdriver.DesiredCapabilities.CHROME)
+        return self
 
     def run(self):
         """
@@ -279,7 +287,6 @@ class EventHorizon:
        """
         scenarios = self.memory["[scenarios]"]
         for index, scenario in enumerate(scenarios):
-            self.memory["[snippets]"] = []
             self.currentScenario = scenario
             format, error = self.checkScenario()
             if (not format):
@@ -292,6 +299,7 @@ class EventHorizon:
             timerScenario.stop()
             self.currentScenarioTime = timerScenario.getTime()
             self.addCurrentReportScenario()
+        return self
 
     def runScenario(self):
         """
@@ -503,6 +511,7 @@ class EventHorizon:
     def saveReport(self):
         with open(self.memory["[options]"]["report"], 'w') as reportFile:
             json.dump(self.memory["[report]"]["data"], reportFile, indent=4)
+        return self
 
     def syntax(self, syntax, tag):
         code = "<step key=\"" + tag + "\" "
@@ -516,7 +525,7 @@ class EventHorizon:
         if(driver is not None):
             driver.close()
             driver.quit()
-        return
+        return self
 
     def loadStep(self, step=None):
         if(step is not None):
